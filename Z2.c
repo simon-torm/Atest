@@ -31,6 +31,7 @@ int main()
 	
 	printf("\n\tY(x) = %lf", func(x, a, b, c, d, f, g, h));
 	
+	return 0;
 }
 
 double func(double x, double a, double b,double c, double d, double f, double g, double h)
