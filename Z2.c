@@ -7,8 +7,10 @@ int main()
 {
 	double x;	
 	
-	for(x = 0; x <= 3000; x += 20)
-		printf("\n\tx = %.0lf,  \t Y(x) = %lf.", x, func(x));
+	printf("\nVvedite X: ");
+	scanf("%lf", &x);
+	
+	printf("\n\tY(x) = %lf", func(x));
 		
 	return 0;
 }
