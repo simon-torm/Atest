@@ -1,15 +1,23 @@
 #include <stdio.h>
 #include <math.h>
 
-double func(double x, double a, double b,double c, double d, double f, double g, double h);
+double func(double x);
 
 int main()
 {
-	double x;
+	double x;	
+	
+	for(x = 0; x <= 3000; x += 20)
+		printf("\n\tx = %.0lf,  \t Y(x) = %lf.", x, func(x));
+		
+	return 0;
+}
+
+double func(double x)
+{
+	double vid;	
 	double a, b, c, d, f, g, h;
 	
-	printf("\nVvedite X: ");
-	scanf("%lf", &x);
 	if(x < 1328) {
 		a = 0;
 		b = 1;
@@ -28,15 +36,6 @@ int main()
 		g = 0.004;
 		h = 1100;
 	}
-	
-	printf("\n\tY(x) = %lf", func(x, a, b, c, d, f, g, h));
-	
-	return 0;
-}
-
-double func(double x, double a, double b,double c, double d, double f, double g, double h)
-{
-	double vid;
 	
 	vid = a + (b / (c + d * exp(f + g * (x + h))));
 	
